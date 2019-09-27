@@ -44,26 +44,36 @@ h1 {
 
 nav ul li {
     margin-left: 10px;
-    margin-right: 10px;  
+    margin-right: 10px;
+    padding: 10px 3px; 
+    border-radius: 4px;
+    border: solid white 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+nav ul li:hover {
+    background-color:white;
+    color: black;
+    border: solid var(--blue) 1px;
+}
+
+.highlight {
+    background-color: var(--blue); 
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s;
+    border: solid white 1px;
+}
+
+.highlight:hover {
+    background-color:white;
+    color: black;
+    border: solid var(--blue) 1px;
 }
 
 nav ul li a {
     padding: 15px 8px;
-    color: white;
-}
-
-nav ul li a:hover {
-    color: var(--dark-blue)
-}
-
-a:link {
-    color: black;
-    text-decoration: none;
-}
-
-a:visited {
-    color: black;
-    text-decoration: none;
 }
 
 .burger {
@@ -98,8 +108,9 @@ main {
     padding-left: 20px;
 }
 
-.home .button {
-    margin: 20px auto;
+.home .buttons {
+    position: relative;
+    bottom: 0px;
 }
 
 .home img {
@@ -161,8 +172,12 @@ main {
     position: absolute;
     bottom: 30px;
     display: flex;
-    /* margin-top: 20px; */
     justify-content: center;
+}
+
+.button:link, .button:visited {
+    color: white;
+    text-decoration: none;
 }
 
 .button {
@@ -177,17 +192,13 @@ main {
 }
 
 #github-portfolio {
-    width: 280px;
+    width: 250px;
     background-color: var(--blue);
-    position: absolute;
+     position: absolute;
     bottom: 50px;
     left: 0;
     right: 0;
     margin: auto;
-}
-
-.button a:link, .button a:visited {
-    color: white;
 }
 
 .button:hover {
@@ -268,6 +279,72 @@ main {
     width: 95%;
 }
 
+.contactme {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+
+.contactme img {
+    max-width: 60%;
+}
+
+.contactme .description {
+    background: white;
+    color: black;
+}
+
+.contactme h3 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa {       /*for font awesome icons*/
+    font-size: 40px;
+    color: var(--blue);
+    margin: 30px 10px 20px 10px;
+}
+
+.fa:hover {
+    opacity: 0.5;
+    transition: all 0.25s;
+}
+
+.footer-container{
+    width: 100%;
+    background-color: black;
+}
+
+footer {
+    max-width: 1200px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    padding: 0 30px;
+    color: white;
+    font-size: 14px;
+}
+
+#email{
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.email-button {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1230px) {
     .home-container {
         padding-left: 30px;
@@ -317,7 +394,6 @@ main {
         left: 0px;
         right: 0px;
         margin: 20px auto;
-        /* pointer-events: none; */
     }
     .middle {
         position: relative;
@@ -325,7 +401,6 @@ main {
         left: 0px;
         right: 0px;
         margin: 20px auto;
-        /* pointer-events: none; */
     }
     .front {
         position: relative;
@@ -333,7 +408,6 @@ main {
         left: 0px;
         right: 0px;
         margin: 20px auto;
-        /* pointer-events: none; */
     }
     .front:hover {
         transform: scale(1);
@@ -346,10 +420,11 @@ main {
     }
     .buttons {
         position: static;
-        margin-top: 30px;
+        margin-top: 50px;
     }
     #github-portfolio {
         position: static;
+        display: block;
     }
     .gif {
         line-height: 0;
@@ -369,12 +444,12 @@ main {
         left: 0;
         height: calc(100vh - var(--header-height));
         width: 100%;
-        background-color: var(--dark-blue);
+        background-color: var(--blue);
         flex-direction: column;
         justify-content: space-around;
         text-align: center;
-        clip-path: circle(0px at 90% 10%);
-        -webkit-clip-path: circle(0px at 90% 10%);
+        clip-path: circle(0px at 95% -5%);
+        -webkit-clip-path: circle(0px at 95% -5%);
         transition: all 1s ease-out;
     }
     .nav-links.open {
@@ -382,25 +457,19 @@ main {
         -webkit-clip-path: circle(1000px at 90% 10%);
     }
     .nav-links li {
-        opacity: 0;
-    }
-    .nav-links li a {
+        margin: auto;
+        width: 50%;
+        /* height: 10%; */
         color: white;
-        font-size: 20px;
+        /* border-color: var(--blue) */
     }
-    .nav-links li:nth-child(1){
-        transition: all 0.5s ease 0.15s;
+    .nav-links li:hover {
+        background-color: var(--blue);
+        color: white;
+        border: white solid 1px;
+        opacity: 0.5;
     }
-    .nav-links li:nth-child(2){
-        transition: all 0.5s ease 0.3s;
-    }
-    .nav-links li:nth-child(3){
-        transition: all 0.5s ease 0.45s;
-    }
-    .nav-links li:nth-child(4){
-        transition: all 0.5s ease 0.6s;
-    }
-    li.fade {
-        opacity: 1;
+    .contactme {
+        display: block;
     }
 }
