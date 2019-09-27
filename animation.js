@@ -28,7 +28,6 @@ function highlightNavButtons () {
             .addTo(controller);
         })
     }
-    console.log('hi');
 }
 
 //add a eventlistener to window resize, since container sizes resize (when window resizes) so need to recalulate start and end triggers
