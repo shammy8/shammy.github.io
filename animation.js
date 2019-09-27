@@ -28,15 +28,19 @@ function highlightNavButtons () {
             .addTo(controller);
         })
     }
+    console.log('hi');
 }
 
 //add a eventlistener to window resize, since container sizes resize (when window resizes) so need to recalulate start and end triggers
+var resizing;   // short delay on resize and scroll so it doesn't use up too much resources caclulating
 window.addEventListener ('resize', () => {  
-    highlightNavButtons();
+    clearTimeout(resizing);
+    resizing = setTimeout(highlightNavButtons, 1000);
 })
-//add a eventlistener onscroll, so that the contacme button gets highlighted properly
+//add a eventlistener onscroll, so that the contacme button gets highlighted properly when screen is at bottom
 window.addEventListener ('scroll', () => {  
-    highlightNavButtons();
+    clearTimeout(resizing);
+    resizing = setTimeout(highlightNavButtons, 10);
 })
 
 highlightNavButtons();      //run the function on page load
