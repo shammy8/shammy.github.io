@@ -1,4 +1,4 @@
 # shammy.github.io
 My Web Portfolio
 
-Built from HTML, CSS, JS, ScrollMagic, GSAP.
+Built from scratch using HTML, CSS, JS, ScrollMagic, GSAP.
