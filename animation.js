@@ -1,8 +1,9 @@
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
-const project1Gif = document.querySelector("#project1-gif");
-const project2Gif = document.querySelector("#project2-gif");
-const project3Gif = document.querySelector("#project3-gif");
+const googleFontsGif = document.querySelector("#googlefonts-gif");
+const marshallGif = document.querySelector("#marshall-gif");
+const churchGif = document.querySelector("#church-gif");
+const lynelGif = document.querySelector("#lynel-gif");
 const projects = document.querySelectorAll(".project");
 const email = document.querySelector("#email");
 const emailButton = document.querySelectorAll(".email-button");
@@ -77,23 +78,30 @@ burger.addEventListener("click", () => {
 });
 
 //changes the images in the project cards into an animated gif when hovering over the image
-project1Gif.addEventListener("mouseover", () => {
-  project1Gif.src = "images/marshall.gif";
+googleFontsGif.addEventListener("mouseover", () => {
+  googleFontsGif.src = "images/googlefonts.gif";
 });
-project1Gif.addEventListener("mouseout", () => {
-  project1Gif.src = "images/marshall.png";
-});
-
-project2Gif.addEventListener("mouseover", () => {
-  project2Gif.src = "images/church.gif";
-});
-project2Gif.addEventListener("mouseout", () => {
-  project2Gif.src = "images/church.png";
+googleFontsGif.addEventListener("mouseout", () => {
+  googleFontsGif.src = "images/googlefonts.png";
 });
 
-project3Gif.addEventListener("mouseover", () => {
-  project3Gif.src = "images/lynel.gif";
+marshallGif.addEventListener("mouseover", () => {
+  marshallGif.src = "images/marshall.gif";
 });
-project3Gif.addEventListener("mouseout", () => {
-  project3Gif.src = "images/lynel.png";
+marshallGif.addEventListener("mouseout", () => {
+  marshallGif.src = "images/marshall.png";
+});
+
+churchGif.addEventListener("mouseover", () => {
+  churchGif.src = "images/church.gif";
+});
+churchGif.addEventListener("mouseout", () => {
+  churchGif.src = "images/church.png";
+});
+
+lynelGif.addEventListener("mouseover", () => {
+  lynelGif.src = "images/lynel.gif";
+});
+lynelGif.addEventListener("mouseout", () => {
+  lynelGif.src = "images/lynel.png";
 });

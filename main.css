@@ -161,6 +161,9 @@ main {
   list-style-type: circle;
 }
 
+.description a {
+  color: white;
+}
 .description li {
   margin-top: 10px;
   margin-left: 30px;
